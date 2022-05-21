@@ -7,13 +7,13 @@ export default function Projects(props) {
         const data = await response.json()
         setProjects(data)
     }
-    useEffect(() => getProjectsData(), [])
+    useEffect(() => {getProjectsData()}, [])
 
     const loaded = () => {
         return projects.map((project, idx) => (
             <div key={idx}>
                 <h1>{project.name}</h1>
-                <img src={project.img}/>
+                <img src={project.img} alt={project.name}/>
                 <a href={project.git}>
                     <button>GitHub</button>
                 </a>
