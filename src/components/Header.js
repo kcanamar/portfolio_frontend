@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 export default function Header(props) {
     const navStyle = {
         display:"flex",
-        justifyContnet:"space-around",
+        justifyContent:"space-around",
         border: "3px solid black",
         padding:"8px",
         width: "90%",
