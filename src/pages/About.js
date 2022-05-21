@@ -11,7 +11,7 @@ export default function About(props) {
         setAbout(data)
         }
         getAboutData()
-    }, [URL])
+    }, [props.URL])
 
     const loaded = () => (
         <div>

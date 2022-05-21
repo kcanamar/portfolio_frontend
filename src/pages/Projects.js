@@ -10,7 +10,7 @@ export default function Projects(props) {
         setProjects(data)
         }
         getProjectsData()
-    }, [URL])
+    }, [props.URL])
 
     const loaded = () => {
         return projects.map((project, idx) => (
