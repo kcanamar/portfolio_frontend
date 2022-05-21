@@ -3,13 +3,15 @@ import { useState, useEffect } from "react"
 
 export default function About(props) {
     const [about, setAbout] = useState(null)
-
-    const getAboutData = async () => {
+    
+    useEffect(() => {
+        const getAboutData = async () => {
         const response = await fetch(props.URL + "about")
         const data = await response.json()
         setAbout(data)
-    }
-    useEffect(() => {getAboutData()}, [])
+        }
+        getAboutData()
+    }, [URL])
 
     const loaded = () => (
         <div>
