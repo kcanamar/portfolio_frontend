@@ -7,7 +7,7 @@ export default function Header(props) {
         border: "3px solid black",
         padding:"8px",
         width: "90%",
-        margin: "auto",
+        margin: "40px",
     }
 
     return (
