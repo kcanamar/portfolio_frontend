@@ -1,17 +1,17 @@
 import { useState, useEffect } from "react"
 
 
-export default function About(props) {
+export default function About({ URL }) {
     const [about, setAbout] = useState(null)
     
     useEffect(() => {
         const getAboutData = async () => {
-        const response = await fetch(props.URL + "about")
+        const response = await fetch(URL + "about")
         const data = await response.json()
         setAbout(data)
         }
         getAboutData()
-    }, [props.URL])
+    }, [URL])
 
     const loaded = () => (
         <div>
