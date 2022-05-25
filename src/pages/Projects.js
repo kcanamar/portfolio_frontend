@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { Paper, Button, Container, Grid, Typography } from "@mui/material"
+import { Paper, Link, Container, Grid, Typography } from "@mui/material"
 import Image from "../components/styled-components/Image.js"
 
 export default function Projects({ URL }) {
@@ -18,8 +18,8 @@ export default function Projects({ URL }) {
         return <Container maxWidth="lg">
                 <Grid container spacing={5}>
                     {projects.map((project, idx) => (
-                            <Grid item xs={4}>
-                                <Paper elevation={3} key={idx}>
+                            <Grid item xs={4} key={idx}>
+                                <Paper elevation={3}>
                                     <Image 
                                         src={project.image} 
                                         alt={project.name} 
@@ -27,8 +27,8 @@ export default function Projects({ URL }) {
                                     <Typography variant="h4" component="h2">
                                         {project.name}
                                     </Typography>
-                                    <Button to={project.git}>GitHub</Button>
-                                    <Button to={project.live}>Live Site</Button>
+                                    <Link href={project.git}>GitHub</Link>
+                                    <Link href={project.live}>Live Site</Link>
                                 </Paper>
                             </Grid>
                         ))}

@@ -5,6 +5,7 @@ export default function Header(props) {
         display:"flex",
         justifyContent:"space-around",
         border: "3px solid black",
+        borderRadius: "5px",
         padding:"8px",
         width: "90%",
         margin: "40px",
